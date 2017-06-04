@@ -75,7 +75,7 @@ int main()
 
 		printf("\n");
 
-		pasaje += pasaje*0.1;
+		pasaje += pasaje*0.25;
 		
 		printf("El valor del pasaje es: %i",pasaje);
 

@@ -29,49 +29,54 @@ XXXXX.XX
 #include <stdio.h>
 #include <stdlib.h>
 
-#define FILA 1
-#define COL 5
-
 int main()
 {
-	int i=0,j=0,into=0,nCLi=0;
-	int matriz[FILA][COL];
+	int i=0,j=0,into=0,trans=0;
+	float vec[6];
 
-	printf("Quiere cargar una transaccion: 1.SI 2.NO");
-	scanf("%i",&into);
-
-	if(into == 1)
+	printf("Que operación desea realizar: \n1. Deposito\n2.Extraccion\n3.Comision\n4.Intereses\n\n");
+	scanf("%i",&trans);
+		
+	switch(trans)
 	{
-		for(i=0;i<FILA;i++){
-			
-			for (j=0;j<COL;j++)
-			{
-				printf("Ingrese numero de cliente: ");
-				scanf("%i",&matriz[i][j]);
+		case 1:
+			printf("Nro de cliente: ");
+			scanf("%f",&vec[0]);
 
-				printf("Ingrese total de depositos del cliente: ");
-				scanf("%i",&matriz[i][j]);
-			}
-		}
+			printf("Cantidad a depositar: ");
+			scanf("%f",&vec[1]);
+		break;
 
-		for(i=0;i<FILA;i++){
-			
-			for (j=0;j<COL;j++)
-			{
-				printf("%i",matriz[i][j]);
-			}
+		case 2:
+			printf("Nro de cliente: ");
+			scanf("%f",&vec[0]);
 
-			printf("\n");
-		}
+			printf("Cantidad a extraer: ");
+			scanf("%f",&vec[2]);
+		break;
 
+		case 3:
+			printf("Nro de cliente: ");
+			scanf("%f",&vec[0]);
 
-	}else if(into == 2)
-	{
-		printf("Adios");
-	}else{
-		printf("Error\n");
+			printf("Comision: ");
+			scanf("%f",&vec[3]);
+		break;
+
+		case 4:
+			printf("Nro de cliente: ");
+			scanf("%f",&vec[0]);
+
+			printf("Intereses: ");
+			scanf("%f",&vec[4]);
+		break;
 	}
 
+	
+
+	
+
+	printf("El numero de cliente es %.2f \nDeposito: %.2f", vec[0],vec[1]);
 	return 0;
 }
 
