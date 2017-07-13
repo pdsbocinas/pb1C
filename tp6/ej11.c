@@ -19,10 +19,10 @@ int main()
 
 	for (i = 0; i < MAX; i++){
 		for (j = 0; j < MAX; j++) {
-			if (vec [i] > vec [j]){ 
-				aux = vec [i]; 
-				vec [i] = vec [j]; 
-				vec [j] = aux; 
+			if (vec [j] > vec [j+1]){ 
+				aux = vec [j]; 
+				vec [j] = vec [j+1]; 
+				vec [j+1] = aux; 
 			}
 		}
 	}
