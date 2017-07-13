@@ -19,16 +19,15 @@ int main()
 
 	for(i=1;i<n;i++)
 	{	
-		fflush(stdin);	
-
+			
 		printf("Ingrese el nombre de un contacto: ");
-		gets(contactos.nombre,sizeof(BUFFER_SIZE), stdin);
-
 		fflush(stdin);
+		gets(contactos.nombre,sizeof(BUFFER_SIZE), stdin);
 
 		printf("\n");
 		
 		printf("Ingrese el numero de un contacto: ");
+		fflush(stdin);
 		scanf("%i",&contactos.numero);
 
 
