@@ -20,6 +20,8 @@ int main()
 
 		printf("Ingrese stock: \n");
 		scanf("%i",&vec[0][3]);
+
+		i++
 		
 	}while(mat<25);
 	
